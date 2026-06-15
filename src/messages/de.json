@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "home": {
+      "title": "Ventrys — Lagerverwaltung & Finanzbuchhaltung",
+      "description": "Bestand, Rechnungen, Debitoren/Kreditoren und Barcodes auf einer Plattform. Moderne Lagerverwaltung für wachsende Unternehmen.",
+      "keywords": "Lagerverwaltung Software, Finanzbuchhaltung, Barcode Lager, Rechnung Bestand Integration, Ventrys"
+    },
+    "features": {
+      "title": "Funktionen — Ventrys Lager & Rechnungen",
+      "description": "Karton/Stück-Bestand, Einkaufs- und Verkaufsrechnungen, Kontokorrent, Barcode-Scan und Berichte.",
+      "keywords": "Bestandsmodul, Rechnungssoftware, Kontokorrent, Barcode Scanner, Ventrys Funktionen"
+    },
+    "pricing": {
+      "title": "Preise — Ventrys Early Access",
+      "description": "Ventrys kostenlos testen. Transparenter Early-Access-Plan für Lager und Buchhaltung.",
+      "keywords": "Lagerverwaltung Preis, kostenlose Buchhaltung, Ventrys Preis"
+    }
+  },
+  "nav": { "features": "Funktionen", "pricing": "Preise", "login": "Anmelden", "register": "Kostenlos starten", "openApp": "App öffnen" },
+  "hero": {
+    "badge": "Lager + Buchhaltung, eine Plattform",
+    "title": "Bestand und Kontokorrent aus einer Hand",
+    "subtitle": "Mit Ventrys steuern Sie Produktbestände, Einkaufs- und Verkaufsrechnungen sowie Kunden- und Lieferantensalden in einer schnellen, barcodefähigen Oberfläche.",
+    "ctaPrimary": "Kostenlos starten",
+    "ctaSecondary": "Anmelden",
+    "mockStock": "Bestand: 2.450 Stk.",
+    "mockInvoice": "Verkaufsrechnung #S-2026-042"
+  },
+  "features": {
+    "title": "Alles, was Sie brauchen",
+    "subtitle": "Schluss mit verstreuten Tabellen. Ventrys bietet integrierte Module für mehr Effizienz.",
+    "items": {
+      "stock": { "title": "Intelligentes Lager", "description": "Karton- und Stück-Einheiten, kritische Bestandswarnungen und Echtzeit-Übersicht." },
+      "invoice": { "title": "Einkaufs- & Verkaufsrechnungen", "description": "Entwurf, Buchung und Storno. Bestand und Kontokorrent werden automatisch aktualisiert." },
+      "ledger": { "title": "Kontokorrent", "description": "Kunden- und Lieferantensalden, Zahlungen und vollständige Historie." },
+      "barcode": { "title": "Barcode & Etiketten", "description": "Kamera- und USB-Scanner, automatische Barcode-Erzeugung und Etikettendruck." },
+      "reports": { "title": "Berichte & Dashboard", "description": "KPI-Karten, Diagramme und Excel/PDF-Export." },
+      "multi": { "title": "Multi-Mandant", "description": "Isolierte Daten pro Firma. Sichere Teamarbeit mit Admin- und Mitarbeiterrollen." }
+    }
+  },
+  "showcase": {
+    "barcode": { "title": "Barcode scannen, Position hinzufügen", "description": "Rechnungspositionen in Sekunden per Kamera oder USB-Scanner. Bestandsgrenzen gelten automatisch.", "alt": "Barcode-Scan im Lager" },
+    "invoice": { "title": "Rechnung buchen, Bestand passt sich an", "description": "Verkäufe reduzieren den Bestand; Einkäufe erhöhen ihn. Salden werden sofort aktualisiert.", "alt": "Rechnung und Bestandsintegration" }
+  },
+  "howItWorks": {
+    "title": "So funktioniert's",
+    "subtitle": "Operative Kontrolle in drei Schritten",
+    "steps": {
+      "1": { "title": "Produkte anlegen", "description": "Barcode, Kategorie, Karton/Stück und Preise eingeben oder importieren." },
+      "2": { "title": "Rechnungen erstellen", "description": "Einkaufs- oder Verkaufsrechnungen als Entwurf speichern oder buchen." },
+      "3": { "title": "Bestand & Kontokorrent automatisch", "description": "Nach der Buchung werden Lagerbewegungen und Kontoeinträge verarbeitet." }
+    }
+  },
+  "trust": {
+    "title": "Vertrauenswürdige Basis",
+    "items": { "tenant": "Mandantenisolierte Daten", "audit": "Aktivitätsprotokoll", "export": "PDF- und Excel-Export", "i18n": "4 Sprachen und Dark Mode" }
+  },
+  "cta": { "title": "Schluss mit Lagerchaos", "subtitle": "Digitalisieren Sie Ihr Unternehmen mit Ventrys. Die Einrichtung dauert Minuten.", "primary": "Jetzt kostenlos starten", "secondary": "Ich habe bereits ein Konto" },
+  "featuresPage": {
+    "heroBadge": "6 integrierte Module",
+    "heroTitle": "Leistungsstarke Module, klare Oberfläche",
+    "heroSubtitle": "Ventrys ist eine integrierte Lager- und Finanzbuchhaltungsplattform für den Alltag.",
+    "stats": {
+      "modules": { "value": "6", "label": "Integrierte Module" },
+      "languages": { "value": "4", "label": "Sprachen" },
+      "export": { "value": "PDF+Excel", "label": "Exportformate" }
+    },
+    "explorerTitle": "Module entdecken",
+    "explorerSubtitle": "Jedes Modul arbeitet zusammen. Wählen Sie eines für Details.",
+    "sections": {
+      "stock": { "short": "Lager", "title": "Lagerverwaltung", "description": "Flexibler Bestand mit Karton- und Stück-Einheiten. Sofortige Warnungen bei kritischen Mengen.", "alt": "Lagerregale", "highlights": ["Karton- und Stück-Einheiten", "Kritische Bestandswarnungen", "Echtzeit-Bestandsübersicht"] },
+      "invoice": { "short": "Rechnung", "title": "Rechnungswesen", "description": "Mit Entwürfen arbeiten; beim Buchen aktualisieren sich Bestand und Kontokorrent automatisch.", "alt": "Geschäftsdokumente", "highlights": ["Entwurf, Buchung und Storno", "Automatische Bestands- & Kontokorrent-Updates", "PDF-Rechnungsausgabe"] },
+      "ledger": { "short": "Konto", "title": "Kontokorrent", "description": "Kunden- und Lieferantensalden verfolgen. Rechnungen und Zahlungen fließen in die Historie.", "alt": "Finanzberichte", "highlights": ["Kunden- & Lieferantensalden", "Zahlungsbuchungen", "Vollständige Bewegungshistorie"] },
+      "barcode": { "short": "Barcode", "title": "Barcode-System", "description": "Kamera-Scan, USB-Leser, automatische Barcode-Erzeugung und Avery-kompatible Etiketten.", "alt": "Barcode-Etikett", "highlights": ["Kamera- und USB-Scanner", "Automatische Barcode-Erzeugung", "Thermoetikettendruck"] },
+      "reports": { "short": "Berichte", "title": "Berichte", "description": "Dashboard-KPIs, Verkaufsdiagramme und exportierbare Berichte.", "alt": "Analytics-Dashboard", "highlights": ["Dashboard-KPI-Karten", "Verkaufsdiagramme", "Excel- und PDF-Export"] },
+      "global": { "short": "Global", "title": "International", "description": "Türkisch, Englisch, Deutsch und Arabisch. Mehrere Währungen und Dark Mode.", "alt": "Globale Business-Software", "highlights": ["4-Sprachen-Oberfläche", "Mehrwährungsunterstützung", "Hell- und Dunkelmodus"] }
+    },
+    "workflow": {
+      "title": "Module im Einklang",
+      "subtitle": "Eine Aktion hält Bestand, Kontokorrent und Berichte synchron.",
+      "steps": {
+        "1": { "title": "Produkte anlegen", "description": "Barcode, Kategorie und Einheiten eingeben — oder per Excel importieren." },
+        "2": { "title": "Rechnungen erstellen", "description": "Einkaufs- oder Verkaufsrechnungen als Entwurf speichern oder buchen." },
+        "3": { "title": "Bestand & Konto aktualisieren", "description": "Nach der Buchung werden Lagerbewegungen und Kontoeinträge automatisch verarbeitet." },
+        "4": { "title": "Berichten & exportieren", "description": "Leistung auf Dashboards verfolgen; als PDF oder Excel exportieren." }
+      }
+    }
+  },
+  "pricingPage": {
+    "heroTitle": "Einfach und transparent",
+    "heroSubtitle": "Ventrys im Early Access kostenlos nutzen.",
+    "planName": "Early Access",
+    "planPrice": "Kostenlos",
+    "planPeriod": "begrenzte Zeit",
+    "planDescription": "Alle Kernmodule inklusive. Keine Kreditkarte nötig.",
+    "planCta": "Konto erstellen",
+    "includes": "Enthalten",
+    "features": ["Unbegrenzte Produkte & Rechnungen", "Barcode-Scan & Etiketten", "Bestands- & Kontokorrent-Integration", "PDF / Excel Export", "4 Sprachen & Dark Mode", "Multi-Mandant"],
+    "faqTitle": "Häufige Fragen",
+    "faq": {
+      "q1": "Für wen ist Ventrys?", "a1": "Ideal für Einzelhandel, Großhandel, leichte Produktion und Lager in KMU.",
+      "q2": "Sind meine Daten sicher?", "a2": "Jede Firma hat isolierte Daten. JWT-Authentifizierung und rollenbasierter Zugriff.",
+      "q3": "Kann ich Daten importieren?", "a3": "Ja, Produktlisten per Excel importieren.",
+      "q4": "Funktioniert es mobil?", "a4": "Ja, die responsive Weboberfläche funktioniert auf Smartphones und Tablets."
+    }
+  },
+  "footer": { "tagline": "Moderne Lagerverwaltung & Buchhaltung", "product": "Produkt", "legal": "Rechtliches", "privacy": "Datenschutz", "terms": "Nutzungsbedingungen", "rights": "Alle Rechte vorbehalten." },
+  "common": { "learnMore": "Mehr erfahren", "getStarted": "Loslegen" },
+  "theme": { "light": "Helles Theme", "dark": "Dunkles Theme", "toggle": "Theme wechseln" },
+  "jsonLd": { "description": "Cloud-basierte Finanzbuchhaltung für Bestand, Rechnungen, Kontokorrent und Barcodes." }
+}

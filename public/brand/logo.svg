@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" fill="none" role="img" aria-label="Ventrys">
+  <g transform="translate(0 4) scale(0.25)">
+    <rect width="160" height="160" rx="32" fill="#1B3A6B"/>
+    <polygon points="28,35 68,115 80,85 60,47" fill="#FFFFFF" opacity="0.95"/>
+    <polygon points="132,35 92,115 80,85 100,47" fill="#FFFFFF" opacity="0.95"/>
+    <rect x="72" y="128" width="6" height="6" rx="1.5" fill="#38BDF8"/>
+    <rect x="81" y="128" width="6" height="6" rx="1.5" fill="#38BDF8" opacity="0.6"/>
+    <rect x="90" y="128" width="6" height="6" rx="1.5" fill="#38BDF8" opacity="0.3"/>
+  </g>
+  <text x="52" y="30" font-family="system-ui, sans-serif" font-size="22" font-weight="600" fill="currentColor" letter-spacing="0.04em">ventrys</text>
+  <text x="52" y="44" font-family="system-ui, sans-serif" font-size="8" font-weight="500" fill="#38BDF8" letter-spacing="0.14em">STOK · CARİ · FATURA</text>
+</svg>

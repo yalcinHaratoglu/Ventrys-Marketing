@@ -1,0 +1,111 @@
+{
+  "meta": {
+    "home": {
+      "title": "Ventrys — Inventory & Light Accounting Software",
+      "description": "Unify stock, invoicing, ledger and barcode management on one platform. Modern inventory and light accounting for growing businesses.",
+      "keywords": "inventory management software, light accounting, barcode stock control, invoice stock integration, SME inventory, Ventrys"
+    },
+    "features": {
+      "title": "Features — Ventrys Stock & Invoicing",
+      "description": "Box/piece stock, purchase & sales invoices, party ledgers, barcode scanning and reporting. Explore all Ventrys modules.",
+      "keywords": "stock module, invoicing software, ledger tracking, barcode scanner, inventory reports, multi-company, Ventrys features"
+    },
+    "pricing": {
+      "title": "Pricing — Ventrys Early Access",
+      "description": "Try Ventrys for free. Transparent early-access plan for your stock and accounting needs.",
+      "keywords": "inventory software pricing, free accounting software, Ventrys pricing"
+    }
+  },
+  "nav": { "features": "Features", "pricing": "Pricing", "login": "Log in", "register": "Start free", "openApp": "Open app" },
+  "hero": {
+    "badge": "Stock + accounting, one platform",
+    "title": "Run inventory and ledgers from a single hub",
+    "subtitle": "With Ventrys, control product stock, purchase & sales invoices, and customer-supplier balances in a fast, barcode-ready interface.",
+    "ctaPrimary": "Start free",
+    "ctaSecondary": "Log in",
+    "mockStock": "Stock: 2,450 pcs",
+    "mockInvoice": "Sales invoice #S-2026-042"
+  },
+  "features": {
+    "title": "Everything you need",
+    "subtitle": "Say goodbye to scattered spreadsheets. Ventrys delivers integrated modules that boost operational efficiency.",
+    "items": {
+      "stock": { "title": "Smart inventory", "description": "Box and piece units, critical stock alerts, and real-time warehouse visibility." },
+      "invoice": { "title": "Purchase & sales invoices", "description": "Draft, post and cancel flows. Stock and ledger update automatically when posted." },
+      "ledger": { "title": "Party ledgers", "description": "Customer and supplier balances, payment records and full transaction history." },
+      "barcode": { "title": "Barcode & labels", "description": "Camera and USB scanner support, auto barcode generation and thermal label printing." },
+      "reports": { "title": "Reports & dashboard", "description": "KPI cards, charts and Excel/PDF export for data-driven decisions." },
+      "multi": { "title": "Multi-company", "description": "Isolated data per company. Secure teamwork with admin and staff roles." }
+    }
+  },
+  "showcase": {
+    "barcode": { "title": "Scan a barcode, add a line", "description": "Add invoice lines in seconds with camera or USB scanner. Stock limits apply automatically.", "alt": "Barcode scanning in warehouse" },
+    "invoice": { "title": "Post an invoice, stock updates itself", "description": "Posted sales reduce stock; purchases increase it. Ledger balances refresh instantly.", "alt": "Invoice and stock integration" }
+  },
+  "howItWorks": {
+    "title": "How it works",
+    "subtitle": "Operational control in three steps",
+    "steps": {
+      "1": { "title": "Define your products", "description": "Enter or import barcode, category, box/piece and pricing." },
+      "2": { "title": "Create invoices", "description": "Issue purchase or sales invoices; save as draft or post." },
+      "3": { "title": "Stock & ledger auto-sync", "description": "After posting, stock movements and ledger entries are processed automatically." }
+    }
+  },
+  "trust": {
+    "title": "Built on trust",
+    "items": { "tenant": "Per-company data isolation", "audit": "Activity log & audit trail", "export": "PDF and Excel export", "i18n": "4 languages and dark mode" }
+  },
+  "cta": { "title": "End inventory chaos", "subtitle": "Digitize your business with Ventrys today. Setup takes minutes.", "primary": "Start free now", "secondary": "I already have an account" },
+  "featuresPage": {
+    "heroBadge": "6 integrated modules",
+    "heroTitle": "Powerful modules, simple UI",
+    "heroSubtitle": "Ventrys is an integrated stock and light accounting platform built for daily operations.",
+    "stats": {
+      "modules": { "value": "6", "label": "Integrated modules" },
+      "languages": { "value": "4", "label": "Languages" },
+      "export": { "value": "PDF+Excel", "label": "Export formats" }
+    },
+    "explorerTitle": "Explore the modules",
+    "explorerSubtitle": "Every module works together. Select one to see the details.",
+    "sections": {
+      "stock": { "short": "Stock", "title": "Inventory management", "description": "Flexible stock with box and piece units. Get instant alerts at critical levels and see warehouse status at a glance.", "alt": "Warehouse shelves", "highlights": ["Box and piece unit support", "Critical stock alerts", "Real-time inventory view"] },
+      "invoice": { "short": "Invoice", "title": "Invoicing", "description": "Work with drafts; when you post, stock and ledger update automatically. Payment status and PDF included.", "alt": "Business documents", "highlights": ["Draft, post and cancel flow", "Auto stock & ledger updates", "PDF invoice output"] },
+      "ledger": { "short": "Ledger", "title": "Party ledgers", "description": "Track customer and supplier balances. Invoices and payments flow into ledger entries.", "alt": "Financial reporting", "highlights": ["Customer & supplier balances", "Payment records", "Full transaction history"] },
+      "barcode": { "short": "Barcode", "title": "Barcode system", "description": "Camera scan, USB reader, auto barcode generation and Avery-compatible label printing.", "alt": "Barcode label scanning", "highlights": ["Camera and USB scanner", "Auto barcode generation", "Thermal label printing"] },
+      "reports": { "short": "Reports", "title": "Reports", "description": "Dashboard KPIs, sales charts and exportable reports.", "alt": "Analytics dashboard", "highlights": ["Dashboard KPI cards", "Sales charts", "Excel and PDF export"] },
+      "global": { "short": "Global", "title": "Global ready", "description": "Turkish, English, German and Arabic UI. Multi-currency and dark theme.", "alt": "Global business software", "highlights": ["4-language UI", "Multi-currency support", "Light and dark theme"] }
+    },
+    "workflow": {
+      "title": "Modules stay in sync",
+      "subtitle": "One action keeps stock, ledger and reports aligned.",
+      "steps": {
+        "1": { "title": "Define products", "description": "Enter barcode, category and unit info — or import via Excel." },
+        "2": { "title": "Create invoices", "description": "Issue purchase or sales invoices; save as draft or post." },
+        "3": { "title": "Stock & ledger update", "description": "After posting, stock movements and ledger entries are processed automatically." },
+        "4": { "title": "Report & export", "description": "Track performance on dashboards and reports; export to PDF or Excel." }
+      }
+    }
+  },
+  "pricingPage": {
+    "heroTitle": "Simple and transparent",
+    "heroSubtitle": "Use Ventrys free during early access.",
+    "planName": "Early Access",
+    "planPrice": "Free",
+    "planPeriod": "limited time",
+    "planDescription": "All core modules included. No credit card required.",
+    "planCta": "Create account",
+    "includes": "Included",
+    "features": ["Unlimited products & invoices", "Barcode scan & labels", "Stock & ledger integration", "PDF / Excel export", "4 languages & dark mode", "Multi-company support"],
+    "faqTitle": "FAQ",
+    "faq": {
+      "q1": "Who is Ventrys for?", "a1": "Ideal for retail, wholesale, light manufacturing and warehouse operations in SMEs.",
+      "q2": "Is my data secure?", "a2": "Each company's data is isolated. JWT authentication and role-based access apply.",
+      "q3": "Can I import existing data?", "a3": "Yes, import your product list via Excel.",
+      "q4": "Does it work on mobile?", "a4": "Yes, the responsive web UI works on phones and tablets."
+    }
+  },
+  "footer": { "tagline": "Modern inventory & light accounting", "product": "Product", "legal": "Legal", "privacy": "Privacy", "terms": "Terms", "rights": "All rights reserved." },
+  "common": { "learnMore": "Learn more", "getStarted": "Get started" },
+  "theme": { "light": "Light theme", "dark": "Dark theme", "toggle": "Toggle theme" },
+  "jsonLd": { "description": "Cloud-based light accounting software for stock, invoicing, ledger and barcode management." }
+}

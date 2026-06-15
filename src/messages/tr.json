@@ -1,0 +1,225 @@
+{
+  "meta": {
+    "home": {
+      "title": "Ventrys — Stok ve Ön Muhasebe Yazılımı",
+      "description": "Stok, fatura, cari ve barkod yönetimini tek platformda birleştirin. Küçük ve orta ölçekli işletmeler için modern envanter ve ön muhasebe çözümü.",
+      "keywords": "stok takip programı, ön muhasebe yazılımı, barkodlu stok yönetimi, fatura stok entegrasyonu, envanter yazılımı, küçük işletme stok, Ventrys"
+    },
+    "features": {
+      "title": "Özellikler — Ventrys Stok ve Fatura Yönetimi",
+      "description": "Kutu/adet stok, alış-satış faturaları, cari hesaplar, barkod tarama ve raporlama. Ventrys'in tüm modüllerini keşfedin.",
+      "keywords": "stok modülü, fatura yazılımı, cari takip, barkod okuma, stok raporu, çoklu şirket, Ventrys özellikleri"
+    },
+    "pricing": {
+      "title": "Fiyatlandırma — Ventrys Erken Erişim",
+      "description": "Ventrys'yi ücretsiz deneyin. Stok ve ön muhasebe ihtiyaçlarınız için şeffaf, erken erişim planı.",
+      "keywords": "stok programı fiyat, ön muhasebe ücretsiz, envanter yazılımı fiyatlandırma, Ventrys fiyat"
+    }
+  },
+  "nav": {
+    "features": "Özellikler",
+    "pricing": "Fiyatlandırma",
+    "login": "Giriş yap",
+    "register": "Ücretsiz başla",
+    "openApp": "Uygulamayı aç"
+  },
+  "hero": {
+    "badge": "Stok + ön muhasebe, tek platform",
+    "title": "İşletmenizin stok ve carisini tek yerden yönetin",
+    "subtitle": "Ventrys ile ürün stoklarınızı, alış-satış faturalarınızı ve müşteri-tedarikçi carilerinizi barkod destekli, hızlı ve güvenilir bir arayüzde kontrol altına alın.",
+    "ctaPrimary": "Ücretsiz başla",
+    "ctaSecondary": "Giriş yap",
+    "mockStock": "Stok: 2.450 adet",
+    "mockInvoice": "Satış faturası #S-2026-042"
+  },
+  "features": {
+    "title": "İhtiyacınız olan her şey",
+    "subtitle": "Dağınık Excel dosyalarına veda edin. Ventrys, operasyonel verimliliğinizi artıran entegre modüller sunar.",
+    "items": {
+      "stock": {
+        "title": "Akıllı stok yönetimi",
+        "description": "Kutu ve adet bazlı stok, kritik seviye uyarıları ve anlık envanter görünümü."
+      },
+      "invoice": {
+        "title": "Alış & satış faturaları",
+        "description": "Taslak, onay ve iptal akışı. Fatura onaylandığında stok ve cari otomatik güncellenir."
+      },
+      "ledger": {
+        "title": "Cari hesaplar",
+        "description": "Müşteri ve tedarikçi bakiyeleri, ödeme kayıtları ve cari hareket geçmişi."
+      },
+      "barcode": {
+        "title": "Barkod & etiket",
+        "description": "Kamera ve USB tarayıcı desteği, otomatik barkod üretimi ve termal etiket yazdırma."
+      },
+      "reports": {
+        "title": "Raporlar & dashboard",
+        "description": "KPI kartları, grafikler ve Excel/PDF dışa aktarma ile kararlarınızı veriye dayandırın."
+      },
+      "multi": {
+        "title": "Çoklu şirket",
+        "description": "Her şirket için izole veri. Admin ve personel rolleri ile güvenli ekip çalışması."
+      }
+    }
+  },
+  "showcase": {
+    "barcode": {
+      "title": "Barkodu okutun, ürünü ekleyin",
+      "description": "Fatura oluştururken kamera veya USB barkod okuyucu ile saniyeler içinde satır ekleyin. Stok sınırı otomatik uygulanır.",
+      "alt": "Depoda barkod tarama"
+    },
+    "invoice": {
+      "title": "Fatura kesin, stok kendiliğinden düşsün",
+      "description": "Onaylanan satış faturaları stoktan düşer; alış faturaları stoku artırır. Cari bakiyeler anında güncellenir.",
+      "alt": "Fatura ve stok entegrasyonu"
+    }
+  },
+  "howItWorks": {
+    "title": "Nasıl çalışır?",
+    "subtitle": "Üç adımda operasyonel kontrol",
+    "steps": {
+      "1": {
+        "title": "Ürünlerinizi tanımlayın",
+        "description": "Barkod, kategori, kutu/adet ve fiyat bilgilerini girin veya içe aktarın."
+      },
+      "2": {
+        "title": "Fatura oluşturun",
+        "description": "Alış veya satış faturası kesin; taslak olarak saklayın veya onaylayın."
+      },
+      "3": {
+        "title": "Stok ve cari otomatik",
+        "description": "Onay sonrası stok hareketleri ve cari kayıtlar sistem tarafından işlenir."
+      }
+    }
+  },
+  "trust": {
+    "title": "Güvenilir altyapı",
+    "items": {
+      "tenant": "Şirket bazlı veri izolasyonu",
+      "audit": "İşlem geçmişi ve audit log",
+      "export": "PDF ve Excel dışa aktarma",
+      "i18n": "4 dil ve karanlık tema desteği"
+    }
+  },
+  "cta": {
+    "title": "Stok kaosuna son verin",
+    "subtitle": "Ventrys ile işletmenizi bugün dijitalleştirin. Kurulum dakikalar sürer.",
+    "primary": "Hemen ücretsiz başla",
+    "secondary": "Zaten hesabım var"
+  },
+  "featuresPage": {
+    "heroBadge": "6 entegre modül",
+    "heroTitle": "Güçlü modüller, sade arayüz",
+    "heroSubtitle": "Ventrys, günlük operasyonlarınız için tasarlanmış entegre bir stok ve ön muhasebe platformudur.",
+    "stats": {
+      "modules": { "value": "6", "label": "Entegre modül" },
+      "languages": { "value": "4", "label": "Dil desteği" },
+      "export": { "value": "PDF+Excel", "label": "Dışa aktarma" }
+    },
+    "explorerTitle": "Modülleri keşfedin",
+    "explorerSubtitle": "Her modül birbirine bağlı çalışır. Detayları görmek için bir modül seçin.",
+    "sections": {
+      "stock": {
+        "short": "Stok",
+        "title": "Stok yönetimi",
+        "description": "Kutu ve adet birimlerini destekleyen esnek stok yapısı. Kritik stok seviyesinde anında uyarı alın, depo durumunu tek ekranda görün.",
+        "alt": "Depo rafları ve envanter",
+        "highlights": ["Kutu ve adet birimi desteği", "Kritik stok uyarıları", "Anlık envanter görünümü"]
+      },
+      "invoice": {
+        "short": "Fatura",
+        "title": "Faturalama",
+        "description": "Taslak faturalarla çalışın, onayladığınızda stok ve cari otomatik güncellensin. Ödeme durumu ve PDF çıktı dahil.",
+        "alt": "İş toplantısı ve belgeler",
+        "highlights": ["Taslak, onay ve iptal akışı", "Stok ve cari otomatik güncelleme", "PDF fatura çıktısı"]
+      },
+      "ledger": {
+        "short": "Cari",
+        "title": "Cari hesaplar",
+        "description": "Müşteri ve tedarikçi bakiyelerini takip edin. Fatura ve ödemeler cari hareketlere yansır.",
+        "alt": "Finansal raporlama",
+        "highlights": ["Müşteri ve tedarikçi bakiyeleri", "Ödeme kayıtları", "Cari hareket geçmişi"]
+      },
+      "barcode": {
+        "short": "Barkod",
+        "title": "Barkod sistemi",
+        "description": "Kamera tarama, USB okuyucu, otomatik barkod üretimi ve Avery uyumlu etiket yazdırma.",
+        "alt": "Barkod etiketi tarama",
+        "highlights": ["Kamera ve USB tarayıcı", "Otomatik barkod üretimi", "Termal etiket yazdırma"]
+      },
+      "reports": {
+        "short": "Rapor",
+        "title": "Raporlar",
+        "description": "Dashboard KPI'ları, satış grafikleri ve dışa aktarılabilir raporlar.",
+        "alt": "Analitik dashboard",
+        "highlights": ["Dashboard KPI kartları", "Satış grafikleri", "Excel ve PDF export"]
+      },
+      "global": {
+        "short": "Global",
+        "title": "Uluslararası kullanım",
+        "description": "Türkçe, İngilizce, Almanca ve Arapça arayüz. Çoklu para birimi ve karanlık tema.",
+        "alt": "Küresel iş yazılımı",
+        "highlights": ["4 dil arayüz desteği", "Çoklu para birimi", "Karanlık ve aydınlık tema"]
+      }
+    },
+    "workflow": {
+      "title": "Modüller birbirine bağlı",
+      "subtitle": "Tek bir işlemde stok, cari ve raporlar senkronize kalır.",
+      "steps": {
+        "1": { "title": "Ürün tanımla", "description": "Barkod, kategori ve birim bilgilerini girin veya Excel ile içe aktarın." },
+        "2": { "title": "Fatura oluştur", "description": "Alış veya satış faturası kesin; taslak olarak saklayın veya onaylayın." },
+        "3": { "title": "Stok & cari güncelle", "description": "Onay sonrası stok hareketleri ve cari kayıtlar otomatik işlenir." },
+        "4": { "title": "Raporla & dışa aktar", "description": "Dashboard ve raporlardan performansı izleyin, PDF veya Excel alın." }
+      }
+    }
+  },
+  "pricingPage": {
+    "heroTitle": "Basit ve şeffaf",
+    "heroSubtitle": "Erken erişim döneminde Ventrys'yi ücretsiz kullanın.",
+    "planName": "Erken Erişim",
+    "planPrice": "Ücretsiz",
+    "planPeriod": "sınırlı süre",
+    "planDescription": "Tüm temel modüller dahil. Kredi kartı gerekmez.",
+    "planCta": "Hesap oluştur",
+    "includes": "Plana dahil",
+    "features": [
+      "Sınırsız ürün ve fatura",
+      "Barkod tarama ve etiket",
+      "Stok ve cari entegrasyonu",
+      "PDF / Excel export",
+      "4 dil ve karanlık tema",
+      "Çoklu şirket desteği"
+    ],
+    "faqTitle": "Sık sorulan sorular",
+    "faq": {
+      "q1": "Ventrys hangi işletmeler için uygun?",
+      "a1": "Perakende, toptan, küçük üretim ve depo operasyonları yürüten KOBİ'ler için idealdir.",
+      "q2": "Verilerim güvende mi?",
+      "a2": "Her şirketin verisi izole edilir. JWT kimlik doğrulama ve rol tabanlı erişim uygulanır.",
+      "q3": "Mevcut verilerimi aktarabilir miyim?",
+      "a3": "Ürün listesini Excel ile içe aktarabilirsiniz.",
+      "q4": "Mobil cihazlarda çalışır mı?",
+      "a4": "Evet, responsive web arayüzü telefon ve tablette de kullanılabilir."
+    }
+  },
+  "footer": {
+    "tagline": "Modern stok ve ön muhasebe platformu",
+    "product": "Ürün",
+    "legal": "Yasal",
+    "privacy": "Gizlilik",
+    "terms": "Kullanım şartları",
+    "rights": "Tüm hakları saklıdır."
+  },
+  "common": {
+    "learnMore": "Daha fazla",
+    "getStarted": "Başlayın"
+  },
+  "theme": {
+    "light": "Açık tema",
+    "dark": "Koyu tema",
+    "toggle": "Tema değiştir"
+  },
+  "jsonLd": {
+    "description": "Stok, fatura, cari ve barkod yönetimi için bulut tabanlı ön muhasebe yazılımı."
+  }
+}

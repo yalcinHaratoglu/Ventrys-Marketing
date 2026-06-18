@@ -12,13 +12,19 @@
     },
     "pricing": {
       "title": "Fiyatlandırma — Ventrys Erken Erişim",
-      "description": "Ventrys'yi ücretsiz deneyin. Stok ve ön muhasebe ihtiyaçlarınız için şeffaf, erken erişim planı.",
-      "keywords": "stok programı fiyat, ön muhasebe ücretsiz, envanter yazılımı fiyatlandırma, Ventrys fiyat"
+      "description": "7 günlük ücretsiz deneme ve premium plan. Stok ve ön muhasebe ihtiyaçlarınız için şeffaf fiyatlandırma.",
+      "keywords": "stok programı fiyat, ön muhasebe ücretsiz deneme, envanter yazılımı fiyatlandırma, Ventrys fiyat"
+    },
+    "contact": {
+      "title": "İletişim — Ventrys",
+      "description": "Premium geçiş, hata bildirimi veya özellik önerisi için Ventrys ekibiyle iletişime geçin.",
+      "keywords": "Ventrys iletişim, premium destek, geri bildirim, özellik önerisi"
     }
   },
   "nav": {
     "features": "Özellikler",
     "pricing": "Fiyatlandırma",
+    "contact": "İletişim",
     "login": "Giriş yap",
     "register": "Ücretsiz başla",
     "openApp": "Uygulamayı aç"
@@ -175,31 +181,74 @@
   },
   "pricingPage": {
     "heroTitle": "Basit ve şeffaf",
-    "heroSubtitle": "Erken erişim döneminde Ventrys'yi ücretsiz kullanın.",
-    "planName": "Erken Erişim",
-    "planPrice": "Ücretsiz",
-    "planPeriod": "sınırlı süre",
-    "planDescription": "Tüm temel modüller dahil. Kredi kartı gerekmez.",
-    "planCta": "Hesap oluştur",
+    "heroSubtitle": "7 günlük ücretsiz deneme ile başlayın; ihtiyaç duyduğunuzda premium'a geçin.",
+    "trialBadge": "Ücretsiz deneme",
+    "trialPrice": "7 gün",
+    "trialPeriod": "ücretsiz kullanım",
+    "trialDescription": "Kayıt ve e-posta doğrulamasından sonra tüm temel modüllere 7 gün boyunca ücretsiz erişin. Kredi kartı gerekmez.",
+    "trialCta": "Ücretsiz başla",
+    "premiumBadge": "Premium",
+    "premiumPrice": "Özel",
+    "premiumPeriod": "işletmenize göre",
+    "premiumDescription": "Deneme süresi sonrası kesintisiz kullanım için premium hesaba geçin. Ekibimiz size özel plan sunar.",
+    "premiumCta": "Premium için iletişime geç",
     "includes": "Plana dahil",
-    "features": [
+    "trialFeatures": [
+      "7 günlük tam erişim",
       "Sınırsız ürün ve fatura",
       "Barkod tarama ve etiket",
       "Stok ve cari entegrasyonu",
       "PDF / Excel export",
-      "4 dil ve karanlık tema",
-      "Çoklu şirket desteği"
+      "4 dil ve karanlık tema"
     ],
+    "premiumFeatures": [
+      "Kesintisiz kullanım",
+      "Öncelikli destek",
+      "Çoklu şirket desteği",
+      "Tüm modüller ve güncellemeler",
+      "Premium hesap yönetimi",
+      "Özel geçiş desteği"
+    ],
+    "feedbackTitle": "Geri bildirim gönderin",
+    "feedbackDescription": "Hata bildirimi, özellik önerisi veya genel sorularınız için formu doldurun; mesajınız doğrudan ekibimize iletilir.",
     "faqTitle": "Sık sorulan sorular",
     "faq": {
-      "q1": "Ventrys hangi işletmeler için uygun?",
-      "a1": "Perakende, toptan, küçük üretim ve depo operasyonları yürüten KOBİ'ler için idealdir.",
-      "q2": "Verilerim güvende mi?",
-      "a2": "Her şirketin verisi izole edilir. JWT kimlik doğrulama ve rol tabanlı erişim uygulanır.",
-      "q3": "Mevcut verilerimi aktarabilir miyim?",
-      "a3": "Ürün listesini Excel ile içe aktarabilirsiniz.",
-      "q4": "Mobil cihazlarda çalışır mı?",
-      "a4": "Evet, responsive web arayüzü telefon ve tablette de kullanılabilir."
+      "q1": "7 günlük ücretsiz deneme nasıl çalışır?",
+      "a1": "Kayıt olup e-postanızı doğruladıktan sonra 7 gün boyunca tüm temel modüllere ücretsiz erişirsiniz. Süre bitince yalnızca geri bildirim formu açık kalır; premium için bizimle iletişime geçebilirsiniz.",
+      "q2": "Ventrys hangi işletmeler için uygun?",
+      "a2": "Perakende, toptan, küçük üretim ve depo operasyonları yürüten KOBİ'ler için idealdir.",
+      "q3": "Verilerim güvende mi?",
+      "a3": "Her şirketin verisi izole edilir. JWT kimlik doğrulama ve rol tabanlı erişim uygulanır.",
+      "q4": "Mevcut verilerimi aktarabilir miyim?",
+      "a4": "Ürün listesini Excel ile içe aktarabilirsiniz.",
+      "q5": "Premium'a nasıl geçerim?",
+      "a5": "Fiyatlandırma sayfasındaki \"Premium için iletişime geç\" butonuna tıklayın veya iletişim formunda \"Premium hesaba geçiş\" konusunu seçin."
+    }
+  },
+  "contactPage": {
+    "heroTitle": "Bizimle iletişime geçin",
+    "heroSubtitle": "Premium geçiş, hata bildirimi veya özellik önerisi için mesajınızı doğrudan ekibimize iletin.",
+    "formTitle": "Geri bildirim formu",
+    "formDescription": "Uygulama içindeki geri bildirim altyapısıyla aynı kanal üzerinden mesajınız bize ulaşır."
+  },
+  "contactForm": {
+    "name": "Ad Soyad",
+    "email": "E-posta",
+    "category": "Konu",
+    "subject": "Başlık (isteğe bağlı)",
+    "subjectPlaceholder": "Kısa bir özet yazın",
+    "message": "Mesajınız",
+    "messagePlaceholder": "Detaylı açıklama yazın...",
+    "messageMinLength": "Mesaj en az 10 karakter olmalıdır.",
+    "send": "Gönder",
+    "sending": "Gönderiliyor...",
+    "sent": "Mesajınız gönderildi. Teşekkür ederiz.",
+    "sendFailed": "Mesaj gönderilemedi. Lütfen daha sonra tekrar deneyin.",
+    "categories": {
+      "bug_report": "Hata bildirimi",
+      "premium_upgrade": "Premium hesaba geçiş",
+      "feature_request": "Özellik önerisi",
+      "general": "Genel geri bildirim"
     }
   },
   "footer": {

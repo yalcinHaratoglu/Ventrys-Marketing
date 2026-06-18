@@ -12,11 +12,16 @@
     },
     "pricing": {
       "title": "Preise — Ventrys Early Access",
-      "description": "Ventrys kostenlos testen. Transparenter Early-Access-Plan für Lager und Buchhaltung.",
-      "keywords": "Lagerverwaltung Preis, kostenlose Buchhaltung, Ventrys Preis"
+      "description": "7 Tage kostenlos testen und Premium-Plan. Transparente Preise für Lager und Buchhaltung.",
+      "keywords": "Lagerverwaltung Preis, kostenlose Testversion, Ventrys Preis"
+    },
+    "contact": {
+      "title": "Kontakt — Ventrys",
+      "description": "Kontaktieren Sie das Ventrys-Team für Premium, Fehlermeldungen oder Feature-Wünsche.",
+      "keywords": "Ventrys Kontakt, Premium Support, Feedback"
     }
   },
-  "nav": { "features": "Funktionen", "pricing": "Preise", "login": "Anmelden", "register": "Kostenlos starten", "openApp": "App öffnen" },
+  "nav": { "features": "Funktionen", "pricing": "Preise", "contact": "Kontakt", "login": "Anmelden", "register": "Kostenlos starten", "openApp": "App öffnen" },
   "hero": {
     "badge": "Lager + Buchhaltung, eine Plattform",
     "title": "Bestand und Kontokorrent aus einer Hand",
@@ -88,20 +93,55 @@
   },
   "pricingPage": {
     "heroTitle": "Einfach und transparent",
-    "heroSubtitle": "Ventrys im Early Access kostenlos nutzen.",
-    "planName": "Early Access",
-    "planPrice": "Kostenlos",
-    "planPeriod": "begrenzte Zeit",
-    "planDescription": "Alle Kernmodule inklusive. Keine Kreditkarte nötig.",
-    "planCta": "Konto erstellen",
+    "heroSubtitle": "Starten Sie mit 7 Tagen kostenlosem Test; wechseln Sie bei Bedarf zu Premium.",
+    "trialBadge": "Kostenlose Testversion",
+    "trialPrice": "7 Tage",
+    "trialPeriod": "kostenlos",
+    "trialDescription": "Nach Registrierung und E-Mail-Bestätigung 7 Tage vollen Zugriff auf alle Kernmodule. Keine Kreditkarte nötig.",
+    "trialCta": "Kostenlos starten",
+    "premiumBadge": "Premium",
+    "premiumPrice": "Individuell",
+    "premiumPeriod": "für Ihr Unternehmen",
+    "premiumDescription": "Nach der Testphase unbegrenzt nutzen. Unser Team erstellt ein passendes Angebot.",
+    "premiumCta": "Premium anfragen",
     "includes": "Enthalten",
-    "features": ["Unbegrenzte Produkte & Rechnungen", "Barcode-Scan & Etiketten", "Bestands- & Kontokorrent-Integration", "PDF / Excel Export", "4 Sprachen & Dark Mode", "Multi-Mandant"],
+    "trialFeatures": ["7 Tage voller Zugriff", "Unbegrenzte Produkte & Rechnungen", "Barcode-Scan & Etiketten", "Bestands- & Kontokorrent-Integration", "PDF / Excel Export", "4 Sprachen & Dark Mode"],
+    "premiumFeatures": ["Unbegrenzte Nutzung", "Prioritäts-Support", "Multi-Mandant", "Alle Module & Updates", "Premium-Kontoverwaltung", "Persönliche Einführung"],
+    "feedbackTitle": "Feedback senden",
+    "feedbackDescription": "Fehler melden, Features vorschlagen oder Fragen stellen — Ihre Nachricht erreicht unser Team direkt.",
     "faqTitle": "Häufige Fragen",
     "faq": {
-      "q1": "Für wen ist Ventrys?", "a1": "Ideal für Einzelhandel, Großhandel, leichte Produktion und Lager in KMU.",
-      "q2": "Sind meine Daten sicher?", "a2": "Jede Firma hat isolierte Daten. JWT-Authentifizierung und rollenbasierter Zugriff.",
-      "q3": "Kann ich Daten importieren?", "a3": "Ja, Produktlisten per Excel importieren.",
-      "q4": "Funktioniert es mobil?", "a4": "Ja, die responsive Weboberfläche funktioniert auf Smartphones und Tablets."
+      "q1": "Wie funktioniert die 7-tägige Testversion?", "a1": "Nach Anmeldung und E-Mail-Bestätigung erhalten Sie 7 Tage kostenlosen Zugriff. Danach bleibt nur das Feedback-Formular offen; für Premium kontaktieren Sie uns.",
+      "q2": "Für wen ist Ventrys?", "a2": "Ideal für Einzelhandel, Großhandel, leichte Produktion und Lager in KMU.",
+      "q3": "Sind meine Daten sicher?", "a3": "Jede Firma hat isolierte Daten. JWT-Authentifizierung und rollenbasierter Zugriff.",
+      "q4": "Kann ich Daten importieren?", "a4": "Ja, Produktlisten per Excel importieren.",
+      "q5": "Wie wechsle ich zu Premium?", "a5": "Klicken Sie auf „Premium anfragen“ oder wählen Sie im Kontaktformular „Premium-Upgrade“."
+    }
+  },
+  "contactPage": {
+    "heroTitle": "Kontakt",
+    "heroSubtitle": "Schreiben Sie uns für Premium, Fehlermeldungen oder Feature-Ideen.",
+    "formTitle": "Feedback-Formular",
+    "formDescription": "Gleicher Kanal wie im App-Feedback — Ihre Nachricht erreicht unser Team."
+  },
+  "contactForm": {
+    "name": "Name",
+    "email": "E-Mail",
+    "category": "Thema",
+    "subject": "Betreff (optional)",
+    "subjectPlaceholder": "Kurze Zusammenfassung",
+    "message": "Ihre Nachricht",
+    "messagePlaceholder": "Details hier eingeben...",
+    "messageMinLength": "Die Nachricht muss mindestens 10 Zeichen haben.",
+    "send": "Senden",
+    "sending": "Wird gesendet...",
+    "sent": "Ihre Nachricht wurde gesendet. Vielen Dank.",
+    "sendFailed": "Nachricht konnte nicht gesendet werden. Bitte später erneut versuchen.",
+    "categories": {
+      "bug_report": "Fehlermeldung",
+      "premium_upgrade": "Premium-Upgrade",
+      "feature_request": "Feature-Wunsch",
+      "general": "Allgemeines Feedback"
     }
   },
   "footer": { "tagline": "Moderne Lagerverwaltung & Buchhaltung", "product": "Produkt", "legal": "Rechtliches", "privacy": "Datenschutz", "terms": "Nutzungsbedingungen", "rights": "Alle Rechte vorbehalten." },

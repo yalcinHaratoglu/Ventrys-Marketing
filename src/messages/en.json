@@ -12,11 +12,16 @@
     },
     "pricing": {
       "title": "Pricing — Ventrys Early Access",
-      "description": "Try Ventrys for free. Transparent early-access plan for your stock and accounting needs.",
-      "keywords": "inventory software pricing, free accounting software, Ventrys pricing"
+      "description": "7-day free trial and premium plan. Transparent pricing for your stock and accounting needs.",
+      "keywords": "inventory software pricing, free trial accounting, Ventrys pricing"
+    },
+    "contact": {
+      "title": "Contact — Ventrys",
+      "description": "Reach the Ventrys team for premium upgrade, bug reports or feature requests.",
+      "keywords": "Ventrys contact, premium support, feedback, feature request"
     }
   },
-  "nav": { "features": "Features", "pricing": "Pricing", "login": "Log in", "register": "Start free", "openApp": "Open app" },
+  "nav": { "features": "Features", "pricing": "Pricing", "contact": "Contact", "login": "Log in", "register": "Start free", "openApp": "Open app" },
   "hero": {
     "badge": "Stock + accounting, one platform",
     "title": "Run inventory and ledgers from a single hub",
@@ -88,20 +93,55 @@
   },
   "pricingPage": {
     "heroTitle": "Simple and transparent",
-    "heroSubtitle": "Use Ventrys free during early access.",
-    "planName": "Early Access",
-    "planPrice": "Free",
-    "planPeriod": "limited time",
-    "planDescription": "All core modules included. No credit card required.",
-    "planCta": "Create account",
+    "heroSubtitle": "Start with a 7-day free trial; upgrade to premium when you need uninterrupted access.",
+    "trialBadge": "Free trial",
+    "trialPrice": "7 days",
+    "trialPeriod": "free access",
+    "trialDescription": "After registration and email verification, access all core modules free for 7 days. No credit card required.",
+    "trialCta": "Start free",
+    "premiumBadge": "Premium",
+    "premiumPrice": "Custom",
+    "premiumPeriod": "for your business",
+    "premiumDescription": "Continue without limits after the trial. Our team will propose a plan tailored to you.",
+    "premiumCta": "Contact us for premium",
     "includes": "Included",
-    "features": ["Unlimited products & invoices", "Barcode scan & labels", "Stock & ledger integration", "PDF / Excel export", "4 languages & dark mode", "Multi-company support"],
+    "trialFeatures": ["7-day full access", "Unlimited products & invoices", "Barcode scan & labels", "Stock & ledger integration", "PDF / Excel export", "4 languages & dark mode"],
+    "premiumFeatures": ["Uninterrupted usage", "Priority support", "Multi-company support", "All modules & updates", "Premium account management", "Dedicated onboarding"],
+    "feedbackTitle": "Send feedback",
+    "feedbackDescription": "Report bugs, suggest features or ask questions — your message goes directly to our team.",
     "faqTitle": "FAQ",
     "faq": {
-      "q1": "Who is Ventrys for?", "a1": "Ideal for retail, wholesale, light manufacturing and warehouse operations in SMEs.",
-      "q2": "Is my data secure?", "a2": "Each company's data is isolated. JWT authentication and role-based access apply.",
-      "q3": "Can I import existing data?", "a3": "Yes, import your product list via Excel.",
-      "q4": "Does it work on mobile?", "a4": "Yes, the responsive web UI works on phones and tablets."
+      "q1": "How does the 7-day free trial work?", "a1": "After sign-up and email verification you get 7 days of free access to all core modules. When it ends, only the feedback form stays open; contact us to upgrade to premium.",
+      "q2": "Who is Ventrys for?", "a2": "Ideal for retail, wholesale, light manufacturing and warehouse operations in SMEs.",
+      "q3": "Is my data secure?", "a3": "Each company's data is isolated. JWT authentication and role-based access apply.",
+      "q4": "Can I import existing data?", "a4": "Yes, import your product list via Excel.",
+      "q5": "How do I upgrade to premium?", "a5": "Click \"Contact us for premium\" on the pricing page or choose \"Premium upgrade\" in the contact form."
+    }
+  },
+  "contactPage": {
+    "heroTitle": "Get in touch",
+    "heroSubtitle": "Send us a message for premium upgrade, bug reports or feature ideas.",
+    "formTitle": "Feedback form",
+    "formDescription": "Uses the same channel as in-app feedback — your message is delivered to our team."
+  },
+  "contactForm": {
+    "name": "Full name",
+    "email": "Email",
+    "category": "Topic",
+    "subject": "Subject (optional)",
+    "subjectPlaceholder": "Short summary",
+    "message": "Your message",
+    "messagePlaceholder": "Write details here...",
+    "messageMinLength": "Message must be at least 10 characters.",
+    "send": "Send",
+    "sending": "Sending...",
+    "sent": "Your message has been sent. Thank you.",
+    "sendFailed": "Could not send message. Please try again later.",
+    "categories": {
+      "bug_report": "Bug report",
+      "premium_upgrade": "Premium upgrade",
+      "feature_request": "Feature request",
+      "general": "General feedback"
     }
   },
   "footer": { "tagline": "Modern inventory & light accounting", "product": "Product", "legal": "Legal", "privacy": "Privacy", "terms": "Terms", "rights": "All rights reserved." },

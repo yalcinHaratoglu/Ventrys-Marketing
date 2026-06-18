@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next'
 import { getSiteUrl } from '@/lib/app-url'
 import { SUPPORTED_LANGUAGES } from '@/i18n/languages'
 
-const PAGES = ['', '/features', '/pricing'] as const
+const PAGES = ['', '/features', '/pricing', '/contact'] as const
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const siteUrl = getSiteUrl()

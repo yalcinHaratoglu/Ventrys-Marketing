@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { getSiteUrl } from './app-url'
 import { SUPPORTED_LANGUAGES, type SupportedLanguage } from '@/i18n/languages'
 
-export type PageKey = 'home' | 'features' | 'pricing'
+export type PageKey = 'home' | 'features' | 'pricing' | 'contact'
 
 type MetaMessages = {
   title: string
@@ -13,9 +13,13 @@ type MetaMessages = {
 export function buildPageMetadata(
   locale: SupportedLanguage,
   page: PageKey,
-  meta: Record<PageKey, MetaMessages>,
+  meta: Partial<Record<PageKey, MetaMessages>>,
 ): Metadata {
-  const { title, description, keywords } = meta[page]
+  const pageMeta = meta[page]
+  if (!pageMeta) {
+    throw new Error(`Missing metadata for page: ${page}`)
+  }
+  const { title, description, keywords } = pageMeta
   const siteUrl = getSiteUrl()
   const path = page === 'home' ? '' : `/${page}`
   const canonical = `${siteUrl}/${locale}${path}`

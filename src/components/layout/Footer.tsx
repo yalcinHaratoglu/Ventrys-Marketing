@@ -30,6 +30,11 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/contact" className="hover:text-indigo-600 dark:hover:text-indigo-400">
+                {nav('contact')}
+              </Link>
+            </li>
+            <li>
               <a href={getAppRegisterUrl()} className="hover:text-indigo-600 dark:hover:text-indigo-400">
                 {nav('register')}
               </a>

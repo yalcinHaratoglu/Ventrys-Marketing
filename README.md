@@ -4,11 +4,11 @@
 > Bu repo, ürünün **açık kaynak pazarlama sitesidir** — landing, SEO ve çok dilli tanıtım katmanı.
 
 <p align="center">
-  <a href="https://ventrys.com"><strong>🌐 ventrys.com</strong></a>
+  <a href="https://ventrys.site"><strong>🌐 ventrys.site</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://app.ventrys.com"><strong>📱 Canlı uygulama</strong></a>
+  <a href="https://app.ventrys.site"><strong>📱 Canlı uygulama</strong></a>
   &nbsp;·&nbsp;
-  <a href="https://app.ventrys.com/login?demo=1"><strong>🎯 Demo ile dene</strong></a>
+  <a href="https://app.ventrys.site/login?demo=1"><strong>🎯 Demo ile dene</strong></a>
 </p>
 
 ---
@@ -17,11 +17,11 @@
 
 Ventrys ekosisteminin **üç katmanından biri** olan pazarlama sitesinin kaynak kodudur. Ana uygulama (React SPA + Django API) ayrı, private bir repoda tutulabilir; **bu repo public kalır** ve portföyünüzde ürünü tanıtmanız için tasarlanmıştır.
 
-| Katman | Teknoloji | Durum |
-|--------|-----------|-------|
-| **Pazarlama sitesi** (bu repo) | Next.js 15, Tailwind 4, next-intl | Public |
-| **Operasyonel uygulama** | React 19, Vite, TanStack Query, Zustand | Private repo |
-| **REST API** | Django 5, DRF, PostgreSQL, JWT | Private repo |
+| Katman                         | Teknoloji                                                              | Durum        |
+| ------------------------------ | ---------------------------------------------------------------------- | ------------ |
+| **Pazarlama sitesi** (bu repo) | Next.js 15, Tailwind 4, next-intl, Resend üzerinden API iletişim formu | Public       |
+| **Operasyonel uygulama**       | React 19, Vite, TanStack Query, Zustand                                | Private repo |
+| **REST API**                   | Django 5, DRF, PostgreSQL, JWT                                         | Private repo |
 
 Marketing sitesi uygulama kodunu içermez; `NEXT_PUBLIC_APP_URL` ile canlı uygulamaya yönlendirir.
 
@@ -33,24 +33,37 @@ Marketing sitesi uygulama kodunu içermez; `NEXT_PUBLIC_APP_URL` ile canlı uygu
 
 ### Temel modüller
 
-| Modül | Ne yapar? |
-|-------|-----------|
-| **Stok** | Kutu/adet bazlı envanter, kritik stok uyarıları, kategori yönetimi |
-| **Faturalar** | Alış/satış, taslak → onay akışı; onayda stok + cari otomatik güncellenir |
-| **Cari** | Müşteri & tedarikçi bakiyeleri, ödeme kayıtları, hareket geçmişi |
-| **Barkod** | Kamera/USB tarama, otomatik barkod üretimi, termal & A4 etiket yazdırma |
-| **Raporlar** | Dashboard KPI, Chart.js trendler, Excel/PDF export |
-| **Multi-tenant** | Her şirket izole veri; admin/personel rolleri |
+| Modül                | Ne yapar?                                                                |
+| -------------------- | ------------------------------------------------------------------------ |
+| **Stok**             | Kutu/adet bazlı envanter, kritik stok uyarıları, kategori yönetimi       |
+| **Faturalar**        | Alış/satış, taslak → onay akışı; onayda stok + cari otomatik güncellenir |
+| **Cari**             | Müşteri & tedarikçi bakiyeleri, ödeme kayıtları, hareket geçmişi         |
+| **Barkod**           | Kamera/USB tarama, otomatik barkod üretimi, termal & A4 etiket yazdırma  |
+| **Raporlar**         | Dashboard KPI, Chart.js trendler, Excel/PDF export                       |
+| **Multi-tenant**     | Her şirket izole veri; admin/personel rolleri                            |
+| **Kasa & çek/senet** | Nakit hareketleri, çek/senet portföyü, tahsil/karşılıksız durum takibi   |
+
+### Abonelik modeli (trial + premium)
+
+| Aşama             | Davranış                                                                                                        |
+| ----------------- | --------------------------------------------------------------------------------------------------------------- |
+| **Kayıt**         | E-posta doğrulama sonrası **7 günlük ücretsiz deneme** başlar                                                   |
+| **Deneme süresi** | Tüm operasyonel modüllere tam erişim                                                                            |
+| **Deneme bitişi** | UI kilitlenir; yalnızca Ayarlar → Geri Bildirim açık kalır                                                      |
+| **Premium**       | Django Admin'de `is_premium` işaretlenir; kesintisiz kullanım                                                   |
+| **İletişim**      | Uygulama içi `/auth/feedback/` (JWT) ve pazarlama sitesi `/auth/contact/` (anonim) → Resend ile `CONTACT_EMAIL` |
+
+Pazarlama sitesinde fiyatlandırma sayfası **7 günlük ücretsiz deneme** ve **Premium** planlarını gösterir; premium CTA `/contact?category=premium_upgrade` ile iletişim formuna yönlendirir ve konu kutusunu otomatik seçer.
 
 ### Demo hesap
 
 Canlı ortamda **kayıt olmadan** deneyebilirsiniz:
 
-| | |
-|---|---|
-| **E-posta** | `demo@ventrys.app` |
-| **Şifre** | `Demo2026!` |
-| **Kısayol** | [app.ventrys.com/login?demo=1](https://app.ventrys.com/login?demo=1) |
+|             |                                                                        |
+| ----------- | ---------------------------------------------------------------------- |
+| **E-posta** | `demo@ventrys.app`                                                     |
+| **Şifre**   | `Demo2026!`                                                            |
+| **Kısayol** | [app.ventrys.site/login?demo=1](https://app.ventrys.site/login?demo=1) |
 
 Demo modu: sunucudan örnek veri bir kez yüklenir, sonraki işlemler tarayıcıda simüle edilir — veritabanı kirlenmez.
 
@@ -84,19 +97,19 @@ Frontend → TanStack Query cache invalidation → UI anında yenilenir
 
 ### Backend API — teknolojiler ve kullanım
 
-| Teknoloji | Nerede / nasıl kullanıldı |
-|-----------|---------------------------|
-| **Django 5** | Proje iskeleti, ORM, admin, migration |
-| **Django REST Framework** | ViewSet tabanlı CRUD, pagination, filtreleme |
-| **SimpleJWT** | Access token (kısa ömür) + refresh token (cookie) |
-| **PostgreSQL** | Production veritabanı; tenant izolasyonu `company_id` ile |
-| **django-cors-headers** | SPA origin'inden cross-origin istekler |
-| **drf-spectacular** | OpenAPI şeması → `/api/docs/` Swagger UI |
-| **django-environ** | `.env` ile `DATABASE_URL`, `SECRET_KEY`, JWT süreleri |
-| **openpyxl** | Ürün/fatura/rapor Excel export |
-| **reportlab** | Fatura PDF üretimi |
-| **WhiteNoise + Gunicorn** | Production static serve & WSGI |
-| **pytest + pytest-django** | Domain service ve API testleri |
+| Teknoloji                  | Nerede / nasıl kullanıldı                                 |
+| -------------------------- | --------------------------------------------------------- |
+| **Django 5**               | Proje iskeleti, ORM, admin, migration                     |
+| **Django REST Framework**  | ViewSet tabanlı CRUD, pagination, filtreleme              |
+| **SimpleJWT**              | Access token (kısa ömür) + refresh token (cookie)         |
+| **PostgreSQL**             | Production veritabanı; tenant izolasyonu `company_id` ile |
+| **django-cors-headers**    | SPA origin'inden cross-origin istekler                    |
+| **drf-spectacular**        | OpenAPI şeması → `/api/docs/` Swagger UI                  |
+| **django-environ**         | `.env` ile `DATABASE_URL`, `SECRET_KEY`, JWT süreleri     |
+| **openpyxl**               | Ürün/fatura/rapor Excel export                            |
+| **reportlab**              | Fatura PDF üretimi                                        |
+| **WhiteNoise + Gunicorn**  | Production static serve & WSGI                            |
+| **pytest + pytest-django** | Domain service ve API testleri                            |
 
 #### Multi-tenant mimari
 
@@ -106,14 +119,15 @@ Roller: **Company Admin** (ayarlar, ekip, şirket bilgisi) ve **Member** (operas
 
 #### Domain modülleri (Django apps)
 
-| App | Modeller / sorumluluk | API örnekleri |
-|-----|----------------------|---------------|
-| `accounts` | User, Company, Membership, e-posta doğrulama | `/auth/register/`, `/auth/login/`, `/company/` |
-| `inventory` | Product, Category, StockMovement | `/products/`, `/categories/`, `/products/critical/` |
-| `parties` | Customer, Supplier, LedgerEntry | `/customers/`, `/suppliers/`, `/{id}/ledger/` |
-| `invoicing` | Invoice, InvoiceItem, InvoicePayment | `/invoices/`, `/post_invoice/`, `/add_payment/` |
-| `reporting` | Aggregasyon view'ları (DB sorgusu) | `/dashboard-summary/`, `/reports/…` |
-| `audit` | ActivityLog | `/activity/` |
+| App         | Modeller / sorumluluk                        | API örnekleri                                         |
+| ----------- | -------------------------------------------- | ----------------------------------------------------- |
+| `accounts`  | User, Company, Membership, e-posta doğrulama | `/auth/register/`, `/auth/login/`, `/company/`        |
+| `inventory` | Product, Category, StockMovement             | `/products/`, `/categories/`, `/products/critical/`   |
+| `parties`   | Customer, Supplier, LedgerEntry              | `/customers/`, `/suppliers/`, `/{id}/ledger/`         |
+| `treasury`  | CashAccount, CheckNote, TreasuryMovement     | `/cash-accounts/`, `/checks-notes/`, durum güncelleme |
+| `invoicing` | Invoice, InvoiceItem, InvoicePayment         | `/invoices/`, `/post_invoice/`, `/add_payment/`       |
+| `reporting` | Aggregasyon view'ları (DB sorgusu)           | `/dashboard-summary/`, `/reports/…`                   |
+| `audit`     | ActivityLog                                  | `/activity/`                                          |
 
 #### Fatura onayı — domain service
 
@@ -147,37 +161,37 @@ Kayıt akışında e-posta doğrulama token'ı gönderilir; doğrulanmadan tam e
 
 ### Frontend SPA — teknolojiler ve kullanım
 
-| Teknoloji | Nerede / nasıl kullanıldı |
-|-----------|---------------------------|
-| **React 19** | Tüm UI; function component + hooks |
-| **Vite 6** | Dev server, HMR, production bundle |
-| **TypeScript** | Strict typing; API response tipleri |
-| **React Router 7** | `/dashboard`, `/products`, `/invoices/…` route'ları |
-| **TanStack Query v5** | Sunucu state: `useQuery`, `useMutation`, cache invalidation |
-| **Zustand** | Auth oturumu, tema, para birimi, fatura taslağı |
-| **Axios** | HTTP client; JWT interceptor + demo adapter |
-| **react-hook-form + Zod** | Form validasyonu (fatura, ürün, ayarlar) |
-| **i18next + react-i18next** | 4 dil; `localStorage` + browser detection |
-| **Tailwind CSS 4** | Utility-first styling; dark mode `class` stratejisi |
-| **Chart.js + react-chartjs-2** | Dashboard aylık gelir/gider grafiği |
-| **html5-qrcode** | Kamera ile barkod/QR tarama |
-| **jsbarcode + react-barcode** | Etiket önizleme ve yazdırma |
-| **lucide-react** | İkon seti |
+| Teknoloji                      | Nerede / nasıl kullanıldı                                   |
+| ------------------------------ | ----------------------------------------------------------- |
+| **React 19**                   | Tüm UI; function component + hooks                          |
+| **Vite 6**                     | Dev server, HMR, production bundle                          |
+| **TypeScript**                 | Strict typing; API response tipleri                         |
+| **React Router 7**             | `/dashboard`, `/products`, `/invoices/…` route'ları         |
+| **TanStack Query v5**          | Sunucu state: `useQuery`, `useMutation`, cache invalidation |
+| **Zustand**                    | Auth oturumu, tema, para birimi, fatura taslağı             |
+| **Axios**                      | HTTP client; JWT interceptor + demo adapter                 |
+| **react-hook-form + Zod**      | Form validasyonu (fatura, ürün, ayarlar)                    |
+| **i18next + react-i18next**    | 4 dil; `localStorage` + browser detection                   |
+| **Tailwind CSS 4**             | Utility-first styling; dark mode `class` stratejisi         |
+| **Chart.js + react-chartjs-2** | Dashboard aylık gelir/gider grafiği                         |
+| **html5-qrcode**               | Kamera ile barkod/QR tarama                                 |
+| **jsbarcode + react-barcode**  | Etiket önizleme ve yazdırma                                 |
+| **lucide-react**               | İkon seti                                                   |
 
 #### Sayfa yapısı ve sorumluluklar
 
-| Sayfa | Ne yapar? | Kullanılan pattern |
-|-------|-----------|-------------------|
-| **Dashboard** | KPI kartları, trend grafiği, son işlemler | `useQuery(['dashboard-summary'])` |
-| **Ürünler** | CRUD, kritik stok filtresi, barkod atama | DataTable + modal formlar |
-| **Faturalar** | Liste, filtre, durum badge'leri | Pagination + search params |
-| **Fatura oluştur** | Satır ekleme, barkod tarama, taslak kaydet | Zustand draft store + RHF |
-| **Fatura detay** | Onay, iptal, ödeme, PDF/Excel | Mutation + invalidation |
-| **Müşteri / Tedarikçi** | Cari kart, hareket geçmişi, fatura listesi | Nested route + ledger tab |
-| **Barkod etiketleri** | Termal 40×30 mm ve Avery A4 layout | Print CSS + jsbarcode |
-| **Raporlar** | Gelir/gider, top ürünler, export | Aggregated API + blob download |
-| **Ayarlar** | Profil, şifre, şirket, ekip, tema | Tab layout; demo'da yalnızca görünüm |
-| **Activity** | Denetim izi listesi | Paginated audit log |
+| Sayfa                   | Ne yapar?                                  | Kullanılan pattern                   |
+| ----------------------- | ------------------------------------------ | ------------------------------------ |
+| **Dashboard**           | KPI kartları, trend grafiği, son işlemler  | `useQuery(['dashboard-summary'])`    |
+| **Ürünler**             | CRUD, kritik stok filtresi, barkod atama   | DataTable + modal formlar            |
+| **Faturalar**           | Liste, filtre, durum badge'leri            | Pagination + search params           |
+| **Fatura oluştur**      | Satır ekleme, barkod tarama, taslak kaydet | Zustand draft store + RHF            |
+| **Fatura detay**        | Onay, iptal, ödeme, PDF/Excel              | Mutation + invalidation              |
+| **Müşteri / Tedarikçi** | Cari kart, hareket geçmişi, fatura listesi | Nested route + ledger tab            |
+| **Barkod etiketleri**   | Termal 40×30 mm ve Avery A4 layout         | Print CSS + jsbarcode                |
+| **Raporlar**            | Gelir/gider, top ürünler, export           | Aggregated API + blob download       |
+| **Ayarlar**             | Profil, şifre, şirket, ekip, tema          | Tab layout; demo'da yalnızca görünüm |
+| **Activity**            | Denetim izi listesi                        | Paginated audit log                  |
 
 #### State yönetimi — iki katman
 
@@ -242,41 +256,114 @@ flowchart LR
     D --> I
 ```
 
-| Olay | Stok | Cari | Rapor |
-|------|------|------|-------|
-| Satış faturası onayı | Adet düşer | Müşteri borcu artar | Gelir KPI güncellenir |
-| Alış faturası onayı | Adet artar | Tedarikçi alacağı artar | Gider KPI güncellenir |
-| Ödeme kaydı | — | Bakiye azalır | Tahsilat/ödeme raporu |
-| Ürün silme (stoklu) | — | Engellenir | — |
+| Olay                 | Stok       | Cari                    | Rapor                 |
+| -------------------- | ---------- | ----------------------- | --------------------- |
+| Satış faturası onayı | Adet düşer | Müşteri borcu artar     | Gelir KPI güncellenir |
+| Alış faturası onayı  | Adet artar | Tedarikçi alacağı artar | Gider KPI güncellenir |
+| Ödeme kaydı          | —          | Bakiye azalır           | Tahsilat/ödeme raporu |
+| Ürün silme (stoklu)  | —          | Engellenir              | —                     |
 
 ---
 
 ### Export ve raporlama
 
 **Backend (gerçek hesaplar):**
+
 - `openpyxl` ile `.xlsx` — ürün listesi, fatura listesi, rapor tabloları
 - `reportlab` ile fatura PDF — şirket logosu, kalem tablosu, KDV dökümü
 
 **Frontend demo:**
-- Aynı endpoint path'leri Axios adapter'da yakalanır
-- CSV/HTML blob olarak indirilir; kullanıcı deneyimi production ile aynıdır
 
-**Dashboard raporları:** Backend aggregation sorguları — aylık gelir/gider trendi, en çok satan ürünler, vadesi geçmiş faturalar, kritik stok listesi.
+- Aynı endpoint path'leri Axios adapter'da yakalanır
+- Gerçek `.xlsx` dosyaları `xlsx` (SheetJS) ile üretilir; fatura PDF yazdırılabilir HTML blob olarak indirilir
+
+**Dashboard raporları:** Backend aggregation sorguları — aylık gelir/gider trendi, en çok satan ürünler, vadesi geçmiş faturalar/çek-senetler, kritik stok listesi.
+
+---
+
+### Geri bildirim ve iletişim altyapısı
+
+Uygulama ve pazarlama sitesi aynı e-posta kanalını paylaşır (Resend → `CONTACT_EMAIL`):
+
+| Kanal            | Endpoint                   | Kimlik doğrulama    | Kullanım                                               |
+| ---------------- | -------------------------- | ------------------- | ------------------------------------------------------ |
+| Uygulama içi     | `POST /api/auth/feedback/` | JWT (giriş gerekli) | Ayarlar → Geri Bildirim; deneme bitince tek açık ekran |
+| Pazarlama sitesi | `POST /api/auth/contact/`  | Anonim (rate limit) | `/contact`, fiyatlandırma geri bildirim formu          |
+
+Kategoriler: `bug_report`, `premium_upgrade`, `feature_request`, `general`. Premium talepleri pazarlama sitesinde `?category=premium_upgrade` query parametresi ile önceden seçilir.
+
+---
+
+### Geliştirme araçları ve kalite süreci
+
+Monorepo kökünde (`ventrys/`) frontend ve backend için ortak kalite zinciri kuruludur:
+
+| Araç                       | Rol                     | Nasıl kullanıldı                                                         |
+| -------------------------- | ----------------------- | ------------------------------------------------------------------------ |
+| **pnpm**                   | Paket yöneticisi        | Workspace: `frontend/`; kök script'ler `pnpm --dir frontend` ile çalışır |
+| **Husky**                  | Git hook'ları           | `prepare` script ile kurulum; commit öncesi/sonrası kontroller           |
+| **lint-staged**            | Staged dosya filtresi   | Yalnızca değişen dosyalarda lint/format                                  |
+| **ESLint 9**               | Frontend statik analiz  | `frontend/eslint.config.js`; React hooks, refresh kuralları              |
+| **Prettier**               | Kod biçimi              | TS/TSX/CSS/JSON; lint-staged ile otomatik                                |
+| **TypeScript**             | Tip güvenliği           | `tsc -b --noEmit`; pre-commit'te typecheck                               |
+| **Commitlint**             | Commit mesajı standardı | Conventional Commits; `type(scope): subject` zorunlu                     |
+| **Commitizen + cz-git**    | İnteraktif commit       | `pnpm commit` → tür/scope/mesaj sihirbazı                                |
+| **Ruff**                   | Python lint + format    | Backend'de `ruff check` ve `ruff format`                                 |
+| **pytest + pytest-django** | Backend testleri        | Domain service ve API testleri; pre-commit'te `manage.py check`          |
+| **drf-spectacular**        | API dokümantasyonu      | OpenAPI şeması, Swagger UI                                               |
+
+**Pre-commit akışı** (`.husky/pre-commit`):
+
+```
+pnpm lint-staged   → ESLint --fix + Prettier (FE), Ruff (BE)
+pnpm typecheck     → TypeScript derleme kontrolü
+pnpm check:backend → django manage.py check
+```
+
+**Commit-msg hook:** Commitlint ile `feat(frontend): ...`, `fix(backend): ...` formatı doğrulanır.
+
+**Kök script'ler:** `pnpm lint`, `pnpm format`, `pnpm check` (lint + typecheck + backend check + pytest).
+
+**Pazarlama sitesi** (bu repo): Next.js ESLint (`next lint`), TypeScript strict, Vercel build pipeline.
+
+---
+
+### Canlıya alma mimarisi
+
+| Bileşen       | Platform | URL                        | Notlar                                                         |
+| ------------- | -------- | -------------------------- | -------------------------------------------------------------- |
+| **API**       | Render   | `ventrys-api.onrender.com` | Gunicorn + WhiteNoise; Neon PostgreSQL; migrate build adımında |
+| **SPA**       | Vercel   | `app.ventrys.site`         | Vite build; `VITE_API_URL`                                     |
+| **Pazarlama** | Vercel   | `ventrys.site`             | Next.js SSG; `NEXT_PUBLIC_API_URL` iletişim formu              |
+| **E-posta**   | Resend   | —                          | Doğrulama + geri bildirim; Render SMTP portu kullanılmaz       |
+| **DB**        | Neon     | —                          | Pooled `DATABASE_URL`                                          |
+
+**Deploy sırası:**
+
+1. Render backend deploy → migration otomatik
+2. `GET /api/health/email/` ile Resend yapılandırması doğrula
+3. `CORS_ALLOWED_ORIGINS`: `app.ventrys.site` + `ventrys.site`
+4. Vercel SPA deploy (`VITE_API_URL`)
+5. Vercel pazarlama deploy (`NEXT_PUBLIC_APP_URL`, `NEXT_PUBLIC_API_URL`, `NEXT_PUBLIC_SITE_URL`)
+6. Kayıt → 7 gün trial → geri bildirim / premium iletişim testi
+
+`render.yaml` şablonu ve `DEPLOYMENT.md` (ana repo) ortam değişkenlerini adım adım listeler.
 
 ---
 
 ### Yapılan işler — özet
 
-| Alan | Gerçekleştirilen |
-|------|------------------|
-| **Mimari** | Multi-tenant SaaS; marketing / SPA / API ayrımı; demo sandbox |
-| **Backend** | 6 Django app, domain service, JWT auth, e-posta doğrulama, OpenAPI |
-| **Frontend** | 15+ sayfa, CRUD modülleri, barkod, grafik, export, 4 dil RTL |
-| **İş kuralları** | Fatura-stok-cari entegrasyonu, yetersiz stok kontrolü, ödeme takibi |
-| **Demo** | Seed command + read-only backend + localStorage client simulation |
-| **Marketing** | SEO-first landing, locale routing, OG/JSON-LD, framer-motion |
-| **Kalite** | pytest, ESLint, Prettier, TypeScript strict, Husky pre-commit |
-| **Deploy** | Docker Compose (PostgreSQL), Render.yaml şablonu, Vercel-ready SPA |
+| Alan             | Gerçekleştirilen                                                               |
+| ---------------- | ------------------------------------------------------------------------------ |
+| **Mimari**       | Multi-tenant SaaS; marketing / SPA / API ayrımı; demo sandbox                  |
+| **Backend**      | 7 Django app (treasury dahil), domain service, JWT, Resend e-posta, OpenAPI    |
+| **Frontend**     | 15+ sayfa, CRUD, kasa/çek-senet, barkod, grafik, gerçek XLSX export, 4 dil RTL |
+| **Abonelik**     | 7 gün trial, premium gate, geri bildirim e-posta akışı                         |
+| **İş kuralları** | Fatura-stok-cari entegrasyonu, cari düzeltme, çek/senet durumları              |
+| **Demo**         | Seed command + read-only backend + localStorage client simulation              |
+| **Marketing**    | SEO landing, fiyatlandırma (trial/premium), iletişim formu, locale routing     |
+| **Kalite**       | Husky, lint-staged, ESLint, Prettier, Ruff, pytest, Commitlint, TypeScript     |
+| **Deploy**       | Render (API) + Vercel (SPA + marketing), Neon Postgres, Resend                 |
 
 ---
 
@@ -284,20 +371,20 @@ flowchart LR
 
 ```
 ┌──────────────────────────┐
-│   Marketing (bu repo)    │  Next.js · SSG/SSR · 4 dil · SEO
-│   ventrys.com            │
+│   Marketing (bu repo)    │  Next.js · SSG · 4 dil · SEO · iletişim formu
+│   ventrys.site           │  POST /api/auth/contact/ → Resend
 └────────────┬─────────────┘
              │  CTA → NEXT_PUBLIC_APP_URL
              ▼
 ┌──────────────────────────┐
-│   Frontend SPA           │  React 19 · Vite · i18n · dark mode
-│   app.ventrys.com        │  TanStack Query · Zustand · Chart.js
+│   Frontend SPA           │  React 19 · Vite · i18n · trial gate
+│   app.ventrys.site       │  TanStack Query · Zustand · demo sandbox
 └────────────┬─────────────┘
              │  REST + JWT (access + refresh cookie)
              ▼
 ┌──────────────────────────┐
-│   Backend API            │  Django 5 · DRF · PostgreSQL
-│   api.ventrys.com        │  Multi-tenant · domain services
+│   Backend API            │  Django 5 · DRF · PostgreSQL · Resend
+│  ventrys-api.onrender.com│  Multi-tenant · 7 app · domain services
 └──────────────────────────┘
 ```
 
@@ -309,15 +396,15 @@ Detaylı açıklama için yukarıdaki [Uygulama nasıl çalışır?](#uygulama-n
 
 ### Tech stack
 
-| Alan | Kullanılan |
-|------|------------|
-| Framework | Next.js 15 (App Router) |
-| Dil | TypeScript |
-| Stil | Tailwind CSS 4 |
-| i18n | next-intl — TR / EN / DE / AR |
-| Tema | next-themes (dark / light) |
+| Alan      | Kullanılan                          |
+| --------- | ----------------------------------- |
+| Framework | Next.js 15 (App Router)             |
+| Dil       | TypeScript                          |
+| Stil      | Tailwind CSS 4                      |
+| i18n      | next-intl — TR / EN / DE / AR       |
+| Tema      | next-themes (dark / light)          |
 | Animasyon | framer-motion (scroll reveal, hero) |
-| İkon | lucide-react |
+| İkon      | lucide-react                        |
 
 ### SEO & performans
 
@@ -332,11 +419,12 @@ Detaylı açıklama için yukarıdaki [Uygulama nasıl çalışır?](#uygulama-n
 ```
 src/
 ├── app/
-│   ├── [locale]/           # Ana sayfa, özellikler, fiyatlandırma
+│   ├── [locale]/           # Ana sayfa, özellikler, fiyatlandırma, iletişim
 │   ├── layout.tsx
 │   └── opengraph-image.tsx
 ├── components/
 │   ├── sections/           # Hero, Features, Pricing, CTA, HowItWorks
+│   ├── forms/              # ContactForm (API geri bildirim)
 │   ├── layout/             # Header, Footer, LanguageSwitcher
 │   ├── brand/              # Logo, LogoMark (SVG)
 │   ├── seo/                # JsonLd
@@ -364,20 +452,21 @@ pnpm dev        # http://localhost:3001
 ### Ortam değişkenleri
 
 ```env
-NEXT_PUBLIC_APP_URL=https://app.ventrys.com
-NEXT_PUBLIC_SITE_URL=https://ventrys.com
+NEXT_PUBLIC_APP_URL=https://app.ventrys.site
+NEXT_PUBLIC_SITE_URL=https://ventrys.site
+NEXT_PUBLIC_API_URL=https://ventrys-api.onrender.com
 ```
 
-| Komut | Açıklama |
-|-------|----------|
-| `pnpm dev` | Geliştirme sunucusu (port 3001) |
-| `pnpm build` | Production build |
-| `pnpm start` | Production sunucu |
-| `pnpm lint` | ESLint |
+| Komut        | Açıklama                        |
+| ------------ | ------------------------------- |
+| `pnpm dev`   | Geliştirme sunucusu (port 3001) |
+| `pnpm build` | Production build                |
+| `pnpm start` | Production sunucu               |
+| `pnpm lint`  | ESLint                          |
 
 ### Deploy
 
-Vercel'de root olarak bu repo deploy edilir. `NEXT_PUBLIC_*` değişkenlerini Vercel dashboard'dan tanımlayın.
+Vercel'de root olarak bu repo deploy edilir. `NEXT_PUBLIC_*` değişkenlerini Vercel dashboard'dan tanımlayın. Backend `CORS_ALLOWED_ORIGINS` içinde pazarlama domain'i (`https://ventrys.site`) olmalıdır; aksi halde iletişim formu CORS hatası verir.
 
 ---
 
@@ -386,42 +475,31 @@ Vercel'de root olarak bu repo deploy edilir. `NEXT_PUBLIC_*` değişkenlerini Ve
 Bu proje kapsamında geliştirdiğim başlıca alanlar:
 
 **Full-stack SaaS**
+
 - Django REST API ile multi-tenant mimari, domain-driven invoice service
 - React 19 SPA: stok, fatura, cari, barkod, raporlama modülleri
 - JWT auth, e-posta doğrulama, rol tabanlı yetkilendirme
 
 **Frontend mühendisliği**
+
 - TanStack Query + Zustand ile state yönetimi
 - 4 dil i18n, RTL, dark/light tema sistemi
 - Barkod tarama (kamera/USB), Chart.js dashboard, PDF/Excel export
 - localStorage tabanlı demo sandbox (Axios adapter pattern)
 
 **Pazarlama & SEO**
+
 - Next.js 15 App Router, next-intl locale routing
 - Structured data, OG image, sitemap, hreflang
 - Framer Motion ile performanslı landing animasyonları
 
 **DevOps & kalite**
-- PostgreSQL, Docker Compose, Render deploy şablonu
-- pytest, Ruff, ESLint, Prettier, Husky pre-commit
 
----
-
-## CV'ye kopyala-yapıştır
-
-**Kısa (1 cümle):**
-> Ventrys adlı multi-tenant stok & ön muhasebe SaaS'ını sıfırdan geliştirdim: Django REST API, React 19 SPA (i18n, barkod, Chart.js) ve Next.js 15 pazarlama sitesi (SEO, 4 dil).
-
-**Orta (LinkedIn / özgeçmiş):**
-> Küçük işletmeler için stok, fatura, cari ve barkod yönetimini birleştiren Ventrys platformunu full-stack olarak tasarladım ve geliştirdim. Backend'de Django + PostgreSQL ile multi-tenant izolasyon ve domain service pattern; frontend'de React 19, TanStack Query ve localStorage demo sandbox; pazarlama katmanında Next.js 15, next-intl ve kapsamlı SEO altyapısı kullandım.
-
-**Madde listesi (CV projects bölümü):**
-- Multi-tenant SaaS: şirket bazlı veri izolasyonu, JWT auth, rol yönetimi
-- Fatura → stok → cari entegrasyonu (tek transaction domain service)
-- Barkod tarama, termal etiket, kritik stok uyarıları
-- 4 dil (TR/EN/DE/AR), dark mode, özelleştirilebilir tema
-- Demo sandbox: sunucuyu kirletmeden canlı ürün deneyimi
-- SEO-first marketing sitesi: JSON-LD, OG, sitemap, locale routing
+- Render + Vercel + Neon Postgres üç katmanlı production mimarisi
+- Resend ile transactional e-posta (doğrulama, geri bildirim, iletişim)
+- Husky pre-commit: lint-staged, TypeScript, `manage.py check`
+- Commitlint conventional commits; Commitizen ile standart mesajlar
+- pytest, Ruff, ESLint, Prettier; `pnpm check` tek komutla tam doğrulama
 
 ---
 
@@ -429,8 +507,8 @@ Bu proje kapsamında geliştirdiğim başlıca alanlar:
 
 > Deploy sonrası `docs/screenshots/` klasörüne ekleyebilirsiniz.
 
-| Landing | Dashboard | Fatura |
-|---------|-----------|--------|
+| Landing           | Dashboard       | Fatura              |
+| ----------------- | --------------- | ------------------- |
 | Hero + özellikler | KPI + grafikler | Taslak → onay akışı |
 
 ---
@@ -439,8 +517,7 @@ Bu proje kapsamında geliştirdiğim başlıca alanlar:
 
 Bu repo (pazarlama sitesi) public olarak paylaşılabilir. Ana uygulama kodu private repoda tutulmaktadır.
 
-<!-- Kendi bilgilerinizi ekleyin: -->
-<!-- **Geliştirici:** [Ad Soyad](https://linkedin.com/in/...) · [GitHub](https://github.com/...) -->
+**Geliştirici:** [M.Yalçın Haratoğlu](https://www.linkedin.com/in/myalcinharatoglu/) · [GitHub](https://github.com/yalcinHaratoglu)
 
 ---
 

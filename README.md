@@ -503,16 +503,6 @@ Bu proje kapsamında geliştirdiğim başlıca alanlar:
 
 ---
 
-## Ekran görüntüleri
-
-> Deploy sonrası `docs/screenshots/` klasörüne ekleyebilirsiniz.
-
-| Landing           | Dashboard       | Fatura              |
-| ----------------- | --------------- | ------------------- |
-| Hero + özellikler | KPI + grafikler | Taslak → onay akışı |
-
----
-
 ## Lisans & iletişim
 
 Bu repo (pazarlama sitesi) public olarak paylaşılabilir. Ana uygulama kodu private repoda tutulmaktadır.
